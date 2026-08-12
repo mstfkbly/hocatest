@@ -1,0 +1,1620 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b3d2e" />
+
+  <title>Yaz Kur'an Kursu - Enes Hoca Sabır Testi 😄</title>
+
+  <style>
+    :root {
+      --bg1: #082b22;
+      --bg2: #0f4d3b;
+      --card: rgba(255,255,255,.10);
+      --card2: rgba(255,255,255,.16);
+      --text: #f7fff9;
+      --muted: #cfe7db;
+      --accent: #ffd166;
+      --green: #38d996;
+      --danger: #ff6b6b;
+      --shadow: 0 18px 50px rgba(0,0,0,.25);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 10% 10%,
+          rgba(255,209,102,.12),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(56,217,150,.12),
+          transparent 30%
+        ),
+        linear-gradient(145deg, var(--bg1), var(--bg2));
+
+      color: var(--text);
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .wrap {
+      width: min(980px, 94%);
+      margin: auto;
+      padding: 24px 0 40px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 24px 8px 14px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      backdrop-filter: blur(8px);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    h1 {
+      font-size: clamp(30px, 7vw, 62px);
+      line-height: 1.02;
+      margin: 16px 0 10px;
+      letter-spacing: -1.5px;
+    }
+
+    .sub {
+      margin: 0 auto;
+      max-width: 650px;
+      color: var(--muted);
+      font-size: clamp(15px, 3.4vw, 19px);
+    }
+
+    .panel {
+      margin-top: 20px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+      overflow: hidden;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding: 18px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+    }
+
+    .meterTitle {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 800;
+      margin-bottom: 8px;
+      gap: 10px;
+    }
+
+    .meter {
+      height: 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      overflow: hidden;
+    }
+
+    .meter > span {
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, var(--green), #9ef2c8);
+      border-radius: inherit;
+      transition: width .5s ease, background .4s ease;
+    }
+
+    .soundBtn {
+      border: 0;
+      background: var(--card2);
+      color: var(--text);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .soundBtn:active {
+      transform: scale(.92);
+    }
+
+    .classroom {
+      position: relative;
+      min-height: 410px;
+      padding: 24px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      background:
+        linear-gradient(
+          rgba(8,43,34,.14),
+          rgba(8,43,34,.14)
+        ),
+        repeating-linear-gradient(
+          0deg,
+          transparent 0 42px,
+          rgba(255,255,255,.025) 43px 44px
+        );
+    }
+
+    .board {
+      max-width: 760px;
+      width: 100%;
+      margin: 0 auto;
+      background: #123c30;
+
+      border: 10px solid #8e6747;
+      border-radius: 18px;
+
+      padding: 22px 18px;
+
+      box-shadow:
+        inset 0 0 0 2px rgba(255,255,255,.05),
+        0 10px 30px rgba(0,0,0,.2);
+
+      text-align: center;
+
+      min-height: 138px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .board small {
+      display: block;
+      color: #b9d8ca;
+      margin-bottom: 7px;
+      font-weight: 700;
+      letter-spacing: .7px;
+      text-transform: uppercase;
+    }
+
+    .message {
+      font-size: clamp(20px, 4.6vw, 32px);
+      font-weight: 900;
+      line-height: 1.22;
+    }
+
+    .students {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .student {
+      position: relative;
+      min-height: 105px;
+
+      border-radius: 22px;
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.1);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      animation: float 3.2s ease-in-out infinite;
+      transition: .3s;
+    }
+
+    .student:nth-child(2) {
+      animation-delay: .4s;
+    }
+
+    .student:nth-child(3) {
+      animation-delay: .8s;
+    }
+
+    .student:nth-child(4) {
+      animation-delay: 1.2s;
+    }
+
+    .student:nth-child(5) {
+      animation-delay: 1.6s;
+    }
+
+    .face {
+      font-size: 42px;
+      filter: drop-shadow(0 7px 8px rgba(0,0,0,.15));
+    }
+
+    .desk {
+      width: 70%;
+      height: 14px;
+      border-radius: 6px;
+      background: #a97750;
+      margin-top: 4px;
+      box-shadow: 0 5px 0 #79533b;
+    }
+
+    .speech {
+      position: absolute;
+      bottom: 98px;
+      left: 50%;
+
+      transform: translateX(-50%) scale(.8);
+
+      width: max-content;
+      max-width: 180px;
+
+      padding: 8px 10px;
+
+      background: white;
+      color: #183229;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      border-radius: 12px;
+
+      opacity: 0;
+      pointer-events: none;
+
+      transition: .25s;
+    }
+
+    .student.talk .speech {
+      opacity: 1;
+      transform: translateX(-50%) scale(1);
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 10px;
+
+      padding: 18px;
+
+      background: rgba(0,0,0,.08);
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 16px;
+
+      padding: 14px 12px;
+
+      font-weight: 900;
+
+      cursor: pointer;
+
+      transition: .2s;
+
+      box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn:active {
+      transform: translateY(1px) scale(.98);
+    }
+
+    .primary {
+      background: var(--accent);
+      color: #2d281a;
+    }
+
+    .secondary {
+      background: #dff8ec;
+      color: #0c4c37;
+    }
+
+    .danger {
+      background: #ffd9d9;
+      color: #6b2222;
+    }
+
+    .status {
+      padding: 0 18px 18px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .bigOverlay {
+      position: fixed;
+      inset: 0;
+
+      display: grid;
+      place-items: center;
+
+      padding: 22px;
+
+      background: rgba(3,18,14,.74);
+      backdrop-filter: blur(10px);
+
+      opacity: 0;
+      pointer-events: none;
+
+      transition: .35s;
+
+      z-index: 50;
+    }
+
+    .bigOverlay.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal {
+      width: min(560px,100%);
+      text-align: center;
+
+      background:
+        linear-gradient(
+          150deg,
+          #154f3d,
+          #0a3328
+        );
+
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 30px;
+
+      padding: 34px 24px;
+
+      box-shadow:
+        0 30px 90px rgba(0,0,0,.35);
+
+      transform: scale(.88);
+      transition: .35s;
+    }
+
+    .bigOverlay.show .modal {
+      transform: scale(1);
+    }
+
+    .modalEmoji {
+      font-size: 70px;
+    }
+
+    .modal h2 {
+      font-size: clamp(28px,8vw,48px);
+      margin: 12px 0 8px;
+    }
+
+    .modal p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .confetti {
+      position: fixed;
+      top: -20px;
+
+      width: 10px;
+      height: 18px;
+
+      border-radius: 3px;
+
+      z-index: 70;
+
+      animation: fall linear forwards;
+    }
+
+    .shake {
+      animation: shake .35s ease;
+    }
+
+    .run {
+      animation: runaway 1s ease-in-out;
+    }
+
+    .sleep .face {
+      animation: snooze 1.4s ease-in-out infinite;
+    }
+
+    .footer {
+      text-align: center;
+      color: #bcd7ca;
+      font-size: 12px;
+      padding: 18px 10px 0;
+      opacity: .85;
+    }
+
+    @keyframes float {
+      0%,100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    @keyframes shake {
+      0%,100% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(-6px);
+      }
+
+      75% {
+        transform: translateX(6px);
+      }
+    }
+
+    @keyframes runaway {
+      0% {
+        transform: translateX(0) rotate(0);
+      }
+
+      50% {
+        transform: translateX(40px) rotate(8deg);
+      }
+
+      100% {
+        transform: translateX(0) rotate(0);
+      }
+    }
+
+    @keyframes snooze {
+      0%,100% {
+        transform: rotate(0);
+      }
+
+      50% {
+        transform: rotate(-8deg);
+      }
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: .85;
+      }
+    }
+
+    @media(max-width:700px) {
+
+      .students {
+        grid-template-columns: repeat(5,1fr);
+        gap: 6px;
+      }
+
+      .student {
+        min-height: 88px;
+        border-radius: 16px;
+      }
+
+      .face {
+        font-size: 32px;
+      }
+
+      .desk {
+        height: 10px;
+      }
+
+      .controls {
+        grid-template-columns: 1fr;
+      }
+
+      .classroom {
+        min-height: 385px;
+        padding: 16px;
+      }
+
+      .speech {
+        max-width: 140px;
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="wrap">
+
+    <section class="hero">
+
+      <div class="badge">
+        ☀️ Yaz Kur'an Kursu 2026 • Eğlence Sürümü
+      </div>
+
+      <h1>
+        Enes Hoca Sabır Testi 😄
+      </h1>
+
+      <p class="sub">
+        Enes Hocam, sınıf hazır.
+        Öğrenciler de hazır sayılır…
+        Teneffüsü sormak için. 😄
+      </p>
+
+    </section>
+
+
+    <section class="panel">
+
+      <div class="topbar">
+
+        <div>
+
+          <div class="meterTitle">
+
+            <span>
+              🧘 Enes Hoca Sabır Seviyesi
+            </span>
+
+            <span id="patienceText">
+              %100
+            </span>
+
+          </div>
+
+          <div class="meter">
+
+            <span id="patienceBar"></span>
+
+          </div>
+
+        </div>
+
+        <button
+          id="soundBtn"
+          class="soundBtn"
+          aria-label="Sesi aç/kapat"
+          title="Sesi aç/kapat"
+        >
+          🔊
+        </button>
+
+      </div>
+
+
+      <div
+        class="classroom"
+        id="classroom"
+      >
+
+        <div class="board">
+
+          <small id="boardTop">
+            Tahtadaki Günün Mesajı
+          </small>
+
+          <div
+            class="message"
+            id="message"
+          >
+            “Enes Hocam, bugün erken çıkıyor muyuz?”
+          </div>
+
+        </div>
+
+
+        <div
+          class="students"
+          id="students"
+        >
+
+          <div class="student">
+
+            <span class="speech">
+              Enes Hocam kalem yok 😅
+            </span>
+
+            <div class="face">
+              🧒🏻
+            </div>
+
+            <div class="desk"></div>
+
+          </div>
+
+
+          <div class="student">
+
+            <span class="speech">
+              Teneffüs ne zaman?
+            </span>
+
+            <div class="face">
+              👦🏻
+            </div>
+
+            <div class="desk"></div>
+
+          </div>
+
+
+          <div class="student">
+
+            <span class="speech">
+              Su içebilir miyim?
+            </span>
+
+            <div class="face">
+              🧒🏽
+            </div>
+
+            <div class="desk"></div>
+
+          </div>
+
+
+          <div class="student">
+
+            <span class="speech">
+              Enes Hocam çok sıcak 😄
+            </span>
+
+            <div class="face">
+              👦🏽
+            </div>
+
+            <div class="desk"></div>
+
+          </div>
+
+
+          <div class="student">
+
+            <span class="speech">
+              Ben bitirdim hocam!
+            </span>
+
+            <div class="face">
+              🧒🏼
+            </div>
+
+            <div class="desk"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="controls">
+
+        <button
+          class="btn primary"
+          id="startBtn"
+        >
+          ▶️ Derse Başla
+        </button>
+
+        <button
+          class="btn secondary"
+          id="rollBtn"
+        >
+          📋 Yoklama Al
+        </button>
+
+        <button
+          class="btn danger"
+          id="breakBtn"
+        >
+          🔔 Teneffüs Ver
+        </button>
+
+      </div>
+
+
+      <div
+        class="status"
+        id="status"
+      >
+        Hazır mıyız Enes Hocam?
+        Sınıf sizden komut bekliyor. 😄
+      </div>
+
+    </section>
+
+
+    <div class="footer">
+      Enes Hoca Yaz Kur'an Kursu • Sabır Testi 😄
+    </div>
+
+  </main>
+
+
+  <div
+    class="bigOverlay"
+    id="overlay"
+  >
+
+    <div class="modal">
+
+      <div
+        class="modalEmoji"
+        id="modalEmoji"
+      >
+        🏆
+      </div>
+
+      <h2 id="modalTitle">
+        Görev tamamlandı Enes Hoca!
+      </h2>
+
+      <p id="modalText">
+        Yaz Kur'an Kursu Hocalığı:
+        Sabır +100 😄
+      </p>
+
+      <button
+        class="btn primary"
+        id="closeModal"
+      >
+        Devam Et 😄
+      </button>
+
+    </div>
+
+  </div>
+
+
+<script>
+
+(() => {
+
+  const events = [
+
+    {
+      text: "Enes Hocam, bugün erken çıkıyor muyuz? 😄",
+      loss: 8,
+      sound: 440
+    },
+
+    {
+      text: "Enes Hocam, teneffüs ne zaman? Daha yeni başladık ama… 😅",
+      loss: 9,
+      sound: 520
+    },
+
+    {
+      text: "Enes Hocam kalemimi evde unutmuşum. Arkadaştan alsam olur mu?",
+      loss: 6,
+      sound: 490
+    },
+
+    {
+      text: "Enes Hocam su içebilir miyim? Şişem tam yanımda ama izin lazım 😄",
+      loss: 5,
+      sound: 610
+    },
+
+    {
+      text: "Enes Hocam ben bitirdim! … Daha sayfayı açmadın ki 😄",
+      loss: 10,
+      sound: 680
+    },
+
+    {
+      text: "Enes Hocam çok sıcak. Klima da bizi anlamıyor. 😅",
+      loss: 7,
+      sound: 560
+    },
+
+    {
+      text: "Enes Hocam bir şey soracağım… Teneffüste futbol var mı? ⚽",
+      loss: 8,
+      sound: 720
+    },
+
+    {
+      text: "Enes Hocam arkadaşım benim yerime 'burada' dedi, sayılır mı? 😄",
+      loss: 11,
+      sound: 430
+    },
+
+    {
+      text: "Enes Hocam ben dinliyordum… gözlerim sadece dinleniyordu. 😴",
+      loss: 12,
+      sound: 350
+    },
+
+    {
+      text: "Enes Hocam bugün ödev olmasın. Yarın iki tane yapalım(!) 😄",
+      loss: 10,
+      sound: 740
+    }
+
+  ];
+
+
+  const rollNames = [
+
+    "Ahmet — Burada ✅",
+
+    "Mehmet — Burada ✅",
+
+    "Yusuf — Burada ✅",
+
+    "Ömer — Burada ✅",
+
+    "Mustafa — …",
+
+    "Mustafa? 👀",
+
+    "Bir kişi eksik… Kim teneffüse erken çıktı? 😂"
+
+  ];
+
+
+  let patience = 100;
+
+  let eventIndex = 0;
+
+  let soundOn = true;
+
+  let rollIndex = 0;
+
+  let rollTimer = null;
+
+
+  const $ = s =>
+    document.querySelector(s);
+
+
+  const message =
+    $("#message");
+
+  const boardTop =
+    $("#boardTop");
+
+  const patienceText =
+    $("#patienceText");
+
+  const patienceBar =
+    $("#patienceBar");
+
+  const status =
+    $("#status");
+
+  const students =
+    [...document.querySelectorAll(".student")];
+
+  const overlay =
+    $("#overlay");
+
+
+  function updatePatience() {
+
+    patience =
+      Math.max(
+        0,
+        Math.min(100, patience)
+      );
+
+
+    patienceText.textContent =
+      "%" + patience;
+
+
+    patienceBar.style.width =
+      patience + "%";
+
+
+    if (patience > 60) {
+
+      patienceBar.style.background =
+        "linear-gradient(90deg,#38d996,#9ef2c8)";
+
+    }
+
+    else if (patience > 30) {
+
+      patienceBar.style.background =
+        "linear-gradient(90deg,#ffd166,#ffb84d)";
+
+    }
+
+    else {
+
+      patienceBar.style.background =
+        "linear-gradient(90deg,#ff6b6b,#ff9d9d)";
+
+    }
+
+  }
+
+
+  function beep(
+    freq = 520,
+    duration = .09,
+    type = "sine"
+  ) {
+
+    if (!soundOn)
+      return;
+
+
+    try {
+
+      const ctx =
+        new (
+          window.AudioContext ||
+          window.webkitAudioContext
+        )();
+
+
+      const osc =
+        ctx.createOscillator();
+
+
+      const gain =
+        ctx.createGain();
+
+
+      osc.type =
+        type;
+
+
+      osc.frequency.value =
+        freq;
+
+
+      gain.gain.setValueAtTime(
+        .07,
+        ctx.currentTime
+      );
+
+
+      gain.gain.exponentialRampToValueAtTime(
+        .0001,
+        ctx.currentTime + duration
+      );
+
+
+      osc.connect(gain);
+
+      gain.connect(
+        ctx.destination
+      );
+
+
+      osc.start();
+
+
+      osc.stop(
+        ctx.currentTime + duration
+      );
+
+
+      setTimeout(
+        () => ctx.close(),
+        250
+      );
+
+    }
+
+    catch (e) {
+
+    }
+
+  }
+
+
+  function bell() {
+
+    [
+      784,
+      988,
+      1175
+    ].forEach(
+
+      (f, i) =>
+
+        setTimeout(
+          () =>
+            beep(
+              f,
+              .16,
+              "triangle"
+            ),
+          i * 120
+        )
+
+    );
+
+  }
+
+
+  function randomStudentTalk() {
+
+    students.forEach(
+
+      s =>
+        s.classList.remove(
+          "talk",
+          "sleep",
+          "run"
+        )
+
+    );
+
+
+    const i =
+      Math.floor(
+        Math.random() *
+        students.length
+      );
+
+
+    students[i]
+      .classList
+      .add("talk");
+
+
+    if (
+      Math.random() > .72
+    ) {
+
+      students[i]
+        .classList
+        .add("sleep");
+
+    }
+
+
+    setTimeout(
+      () =>
+        students[i]
+          .classList
+          .remove("talk"),
+      2300
+    );
+
+  }
+
+
+  function classShake() {
+
+    const c =
+      $("#classroom");
+
+
+    c.classList.remove(
+      "shake"
+    );
+
+
+    void c.offsetWidth;
+
+
+    c.classList.add(
+      "shake"
+    );
+
+  }
+
+
+  function nextEvent() {
+
+    if (
+      patience <= 0
+    ) {
+
+      finish();
+
+      return;
+
+    }
+
+
+    const ev =
+      events[
+        eventIndex %
+        events.length
+      ];
+
+
+    boardTop.textContent =
+      "Sınıftan Yeni Bir Soru";
+
+
+    message.textContent =
+      "“" +
+      ev.text +
+      "”";
+
+
+    patience -=
+      ev.loss;
+
+
+    updatePatience();
+
+
+    randomStudentTalk();
+
+
+    beep(
+      ev.sound,
+      .12,
+      "triangle"
+    );
+
+
+    classShake();
+
+
+    const comments = [
+
+      "Sabırdan biraz gitti Enes Hocam 😄",
+
+      "Sınıfın enerjisi yine yerinde.",
+
+      "Enes Hoca'nın sakinlik puanı test ediliyor. 😅",
+
+      "Bir soru daha başarıyla karşılandı!",
+
+      "Öğrenciler: 1 — Enes Hoca'nın sabrı: hâlâ güçlü 😄"
+
+    ];
+
+
+    status.textContent =
+      comments[
+        Math.floor(
+          Math.random() *
+          comments.length
+        )
+      ];
+
+
+    eventIndex++;
+
+
+    if (
+      patience <= 20
+    ) {
+
+      status.textContent =
+        "⚠️ Sabır kritik seviyede Enes Hocam! Teneffüs ilacı gerekebilir. 😄";
+
+    }
+
+
+    if (
+      patience <= 0
+    ) {
+
+      setTimeout(
+        finish,
+        600
+      );
+
+    }
+
+  }
+
+
+  function takeRoll() {
+
+    clearInterval(
+      rollTimer
+    );
+
+
+    rollIndex =
+      0;
+
+
+    boardTop.textContent =
+      "Yoklama";
+
+
+    message.textContent =
+      rollNames[0];
+
+
+    beep(
+      520,
+      .08
+    );
+
+
+    rollTimer =
+      setInterval(
+        () => {
+
+          rollIndex++;
+
+
+          if (
+            rollIndex >=
+            rollNames.length
+          ) {
+
+            clearInterval(
+              rollTimer
+            );
+
+
+            students[4]
+              .classList
+              .add("run");
+
+
+            patience -=
+              7;
+
+
+            updatePatience();
+
+
+            status.textContent =
+              "Yoklama tamamlandı Enes Hocam… ama bir kişi gizemli şekilde ortada yok. 😂";
+
+
+            beep(
+              260,
+              .18,
+              "square"
+            );
+
+
+            return;
+
+          }
+
+
+          message.textContent =
+            rollNames[
+              rollIndex
+            ];
+
+
+          beep(
+            480 +
+            rollIndex * 35,
+            .06
+          );
+
+        },
+
+        520
+
+      );
+
+  }
+
+
+  function breakTime() {
+
+    clearInterval(
+      rollTimer
+    );
+
+
+    boardTop.textContent =
+      "Beklenen An";
+
+
+    message.textContent =
+      "🔔 TENEFFÜS!";
+
+
+    patience =
+      Math.min(
+        100,
+        patience + 20
+      );
+
+
+    updatePatience();
+
+
+    bell();
+
+
+    students.forEach(
+
+      (s, i) => {
+
+        s.classList.remove(
+          "talk",
+          "sleep"
+        );
+
+
+        setTimeout(
+          () =>
+            s.classList.add(
+              "run"
+            ),
+          i * 70
+        );
+
+
+        setTimeout(
+          () =>
+            s.classList.remove(
+              "run"
+            ),
+          1200 +
+          i * 70
+        );
+
+      }
+
+    );
+
+
+    status.textContent =
+      "Mucize gerçekleşti Enes Hocam: Sınıf 0.3 saniyede boşaldı. 😂";
+
+
+    confetti(35);
+
+  }
+
+
+  function finish() {
+
+    boardTop.textContent =
+      "Günün Sonu";
+
+
+    message.textContent =
+      "Enes Hoca, günü başarıyla tamamladınız. 🏆";
+
+
+    $("#modalEmoji")
+      .textContent =
+      "🏆";
+
+
+    $("#modalTitle")
+      .textContent =
+      "Görev tamamlandı Enes Hoca!";
+
+
+    $("#modalText")
+      .innerHTML =
+
+      "Yaz Kur'an Kursu Hocalığı: " +
+
+      "<b>Sabır +100</b> 😄" +
+
+      "<br><br>" +
+
+      "Öğrenciler seni seviyor Enes Hoca…" +
+
+      "<br>" +
+
+      "sadece teneffüsü biraz daha fazla seviyorlar. 😂";
+
+
+    overlay.classList.add(
+      "show"
+    );
+
+
+    bell();
+
+
+    confetti(80);
+
+
+    patience =
+      100;
+
+
+    updatePatience();
+
+
+    status.textContent =
+      "Yeni gün için Enes Hoca'nın sabır seviyesi tekrar dolduruldu. 😄";
+
+  }
+
+
+  function confetti(
+    n = 50
+  ) {
+
+    const colors = [
+
+      "#ffd166",
+
+      "#38d996",
+
+      "#ffffff",
+
+      "#ff6b6b",
+
+      "#74c0fc"
+
+    ];
+
+
+    for (
+      let i = 0;
+      i < n;
+      i++
+    ) {
+
+      const d =
+        document.createElement(
+          "div"
+        );
+
+
+      d.className =
+        "confetti";
+
+
+      d.style.left =
+        Math.random() *
+        100 +
+        "vw";
+
+
+      d.style.background =
+        colors[
+          Math.floor(
+            Math.random() *
+            colors.length
+          )
+        ];
+
+
+      d.style.animationDuration =
+        (
+          1.8 +
+          Math.random() *
+          1.9
+        ) +
+        "s";
+
+
+      d.style.animationDelay =
+        (
+          Math.random() *
+          .35
+        ) +
+        "s";
+
+
+      d.style.transform =
+        `rotate(${Math.random() * 180}deg)`;
+
+
+      document.body
+        .appendChild(d);
+
+
+      setTimeout(
+        () =>
+          d.remove(),
+        4200
+      );
+
+    }
+
+  }
+
+
+  $("#startBtn")
+    .addEventListener(
+      "click",
+      nextEvent
+    );
+
+
+  $("#rollBtn")
+    .addEventListener(
+      "click",
+      takeRoll
+    );
+
+
+  $("#breakBtn")
+    .addEventListener(
+      "click",
+      breakTime
+    );
+
+
+  $("#closeModal")
+    .addEventListener(
+      "click",
+      () =>
+        overlay
+          .classList
+          .remove("show")
+    );
+
+
+  $("#soundBtn")
+    .addEventListener(
+      "click",
+      e => {
+
+        soundOn =
+          !soundOn;
+
+
+        e.currentTarget
+          .textContent =
+          soundOn
+          ? "🔊"
+          : "🔇";
+
+
+        if (
+          soundOn
+        ) {
+
+          beep(
+            620,
+            .08
+          );
+
+        }
+
+      }
+    );
+
+
+  setTimeout(
+    () => {
+
+      message.textContent =
+        "“Enes Hocam, bugün erken çıkıyor muyuz?”";
+
+
+      randomStudentTalk();
+
+    },
+
+    900
+
+  );
+
+
+  updatePatience();
+
+})();
+
+</script>
+
+</body>
+</html>
