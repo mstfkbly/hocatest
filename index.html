@@ -8,6 +8,7 @@
 <title>Enes Hoca • Yaz Kur'an Kursu</title>
 
 <style>
+
 *{
     box-sizing:border-box;
 }
@@ -15,8 +16,6 @@
 :root{
     --bg:#061914;
     --bg2:#0d332a;
-    --green:#194f41;
-    --green2:#23705b;
     --gold:#e8c875;
     --cream:#f3efe4;
     --muted:#aebfb8;
@@ -42,28 +41,31 @@ body{
     overflow-x:hidden;
 
     background:
-        radial-gradient(circle at 20% 10%,
-        rgba(232,200,117,.12),
-        transparent 28%),
-
-        radial-gradient(circle at 85% 40%,
-        rgba(52,191,145,.12),
-        transparent 32%),
-
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(232,200,117,.12),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 40%,
+            rgba(52,191,145,.12),
+            transparent 32%
+        ),
         linear-gradient(
-        145deg,
-        var(--bg),
-        var(--bg2)
+            145deg,
+            var(--bg),
+            var(--bg2)
         );
 }
 
-/* ==========================
-   AÇILIŞ
-========================== */
+/* ==============================
+   SİNEMATİK AÇILIŞ
+================================ */
 
 .intro{
     position:fixed;
     inset:0;
+
     z-index:999;
 
     display:flex;
@@ -71,9 +73,11 @@ body{
     justify-content:center;
 
     background:
-        radial-gradient(circle at center,
-        #123f34,
-        #061713 65%);
+        radial-gradient(
+            circle at center,
+            #123f34,
+            #061713 65%
+        );
 
     transition:
         opacity .8s ease,
@@ -87,7 +91,7 @@ body{
 
 .introContent{
     text-align:center;
-    animation:introZoom 1.5s ease;
+    animation:introZoom 1.4s ease;
 }
 
 .introSmall{
@@ -105,18 +109,21 @@ body{
 
     background:
         linear-gradient(
-        135deg,
-        white,
-        #e8c875
+            135deg,
+            white,
+            #e8c875
         );
 
     -webkit-background-clip:text;
+    background-clip:text;
+
     color:transparent;
 }
 
 .introLine{
     width:90px;
     height:2px;
+
     margin:22px auto;
 
     background:var(--gold);
@@ -128,6 +135,7 @@ body{
 }
 
 @keyframes introZoom{
+
     from{
         opacity:0;
         transform:scale(.9);
@@ -137,16 +145,21 @@ body{
         opacity:1;
         transform:scale(1);
     }
+
 }
 
-/* ==========================
-   GENEL
-========================== */
+/* ==============================
+   SAYFA
+================================ */
 
 .page{
     width:min(1180px,94%);
     margin:auto;
-    padding:26px 0 60px;
+
+    padding:
+        26px
+        0
+        60px;
 }
 
 header{
@@ -157,22 +170,32 @@ header{
 .badge{
     display:inline-block;
 
-    padding:8px 14px;
+    padding:
+        8px
+        14px;
 
     border-radius:999px;
-    border:1px solid rgba(232,200,117,.25);
 
-    background:rgba(232,200,117,.07);
+    border:
+        1px solid
+        rgba(232,200,117,.25);
+
+    background:
+        rgba(232,200,117,.07);
 
     color:#e5d6a5;
 
     font-size:11px;
     font-weight:800;
+
     letter-spacing:.15em;
 }
 
 header h1{
-    margin:15px 0 7px;
+    margin:
+        15px
+        0
+        7px;
 
     font-size:clamp(36px,7vw,68px);
     letter-spacing:-.055em;
@@ -184,44 +207,54 @@ header h1 span{
 
 header p{
     margin:0;
-
     color:var(--muted);
 }
 
-/* ==========================
-   ÜST PANEL
-========================== */
+/* ==============================
+   PANEL
+================================ */
 
 .panel{
-    border:1px solid var(--line);
+    border:
+        1px solid
+        var(--line);
+
     border-radius:30px;
 
     background:
         linear-gradient(
-        145deg,
-        rgba(255,255,255,.07),
-        rgba(255,255,255,.035)
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.035)
         );
 
     overflow:hidden;
 
     box-shadow:
-        0 35px 100px rgba(0,0,0,.28);
+        0 35px 100px
+        rgba(0,0,0,.28);
 
-    backdrop-filter:blur(18px);
+    backdrop-filter:
+        blur(18px);
 }
 
 .topbar{
     display:grid;
-    grid-template-columns:1fr auto;
+
+    grid-template-columns:
+        1fr auto;
 
     gap:18px;
 
     align-items:center;
 
-    padding:20px 24px;
+    padding:
+        20px
+        24px;
 
-    border-bottom:1px solid var(--line);
+    border-bottom:
+        1px solid
+        var(--line);
 }
 
 .meterHead{
@@ -241,7 +274,8 @@ header p{
 .meter{
     height:11px;
 
-    background:rgba(255,255,255,.08);
+    background:
+        rgba(255,255,255,.08);
 
     border-radius:999px;
 
@@ -256,9 +290,9 @@ header p{
 
     background:
         linear-gradient(
-        90deg,
-        #3ab885,
-        #78d6ae
+            90deg,
+            #3ab885,
+            #78d6ae
         );
 
     transition:
@@ -271,9 +305,14 @@ header p{
     height:48px;
 
     border-radius:15px;
-    border:1px solid var(--line);
 
-    background:rgba(255,255,255,.07);
+    border:
+        1px solid
+        var(--line);
+
+    background:
+        rgba(255,255,255,.07);
+
     color:white;
 
     cursor:pointer;
@@ -281,9 +320,9 @@ header p{
     font-size:20px;
 }
 
-/* ==========================
-   3D SINIF
-========================== */
+/* ==============================
+   SINIF
+================================ */
 
 .classroomWrap{
     position:relative;
@@ -305,26 +344,29 @@ header p{
 
     border-radius:28px;
 
-    border:1px solid rgba(255,255,255,.08);
+    border:
+        1px solid
+        rgba(255,255,255,.08);
 
     overflow:hidden;
 
-    transform-style:preserve-3d;
+    transform-style:
+        preserve-3d;
 
     background:
         linear-gradient(
-        to bottom,
-        #254b3f 0%,
-        #173c32 56%,
-        #9a754d 56%,
-        #7b593c 100%
+            to bottom,
+            #254b3f 0%,
+            #173c32 56%,
+            #9a754d 56%,
+            #7b593c 100%
         );
 
     box-shadow:
-        inset 0 0 90px rgba(0,0,0,.22);
+        inset
+        0 0 90px
+        rgba(0,0,0,.22);
 }
-
-/* arka duvar */
 
 .wallLight{
     position:absolute;
@@ -334,13 +376,13 @@ header p{
 
     background:
         radial-gradient(
-        ellipse at 50% 10%,
-        rgba(255,246,204,.16),
-        transparent 45%
+            ellipse at 50% 10%,
+            rgba(255,246,204,.16),
+            transparent 45%
         );
 }
 
-/* pencere */
+/* PENCERE */
 
 .window{
     position:absolute;
@@ -351,17 +393,21 @@ header p{
     width:125px;
     height:155px;
 
-    border:8px solid #5c4532;
+    border:
+        8px solid
+        #5c4532;
+
     border-radius:10px;
 
     background:
         linear-gradient(
-        #8dd1e6,
-        #d7f1f6
+            #8dd1e6,
+            #d7f1f6
         );
 
     box-shadow:
-        0 15px 30px rgba(0,0,0,.2);
+        0 15px 30px
+        rgba(0,0,0,.2);
 }
 
 .window:before,
@@ -389,7 +435,7 @@ header p{
     left:0;
 }
 
-/* tahta */
+/* TAHTA */
 
 .board{
     position:absolute;
@@ -406,18 +452,22 @@ header p{
 
     padding:25px;
 
-    border:10px solid #73553a;
+    border:
+        10px solid
+        #73553a;
+
     border-radius:16px;
 
     background:
         linear-gradient(
-        145deg,
-        #174237,
-        #0e3129
+            145deg,
+            #174237,
+            #0e3129
         );
 
     box-shadow:
-        0 20px 35px rgba(0,0,0,.25);
+        0 20px 35px
+        rgba(0,0,0,.25);
 
     text-align:center;
 }
@@ -434,12 +484,17 @@ header p{
 .boardTitle{
     margin-top:13px;
 
-    font-size:clamp(18px,3vw,30px);
+    font-size:
+        clamp(18px,3vw,30px);
+
     font-weight:800;
+
     line-height:1.25;
 }
 
-/* öğretmen */
+/* ==============================
+   HOCA
+================================ */
 
 .teacher{
     position:absolute;
@@ -466,12 +521,18 @@ header p{
         translateY(-5px);
 }
 
-/* kişi gövdesi */
-
 .person{
     position:relative;
+
     width:110px;
+
     margin:auto;
+
+    animation:
+        teacherIdle
+        3.5s
+        ease-in-out
+        infinite;
 }
 
 .head{
@@ -481,23 +542,26 @@ header p{
     margin:auto;
 
     border-radius:
-        45% 45% 48% 48%;
+        45% 45%
+        48% 48%;
 
     background:
         linear-gradient(
-        145deg,
-        #d9a67f,
-        #bf8262
+            145deg,
+            #d9a67f,
+            #bf8262
         );
 
     position:relative;
 
     box-shadow:
-        inset -10px -8px 18px rgba(0,0,0,.09),
-        0 8px 15px rgba(0,0,0,.15);
-}
+        inset
+        -10px -8px 18px
+        rgba(0,0,0,.09),
 
-/* saç */
+        0 8px 15px
+        rgba(0,0,0,.15);
+}
 
 .head:before{
     content:"";
@@ -511,15 +575,11 @@ header p{
     height:28px;
 
     border-radius:
-        45px
-        45px
-        20px
-        20px;
+        45px 45px
+        20px 20px;
 
     background:#28211e;
 }
-
-/* gözler */
 
 .eyes{
     position:absolute;
@@ -529,7 +589,9 @@ header p{
     right:19px;
 
     display:flex;
-    justify-content:space-between;
+
+    justify-content:
+        space-between;
 }
 
 .eye{
@@ -541,8 +603,6 @@ header p{
     background:#27211e;
 }
 
-/* ağız */
-
 .mouth{
     position:absolute;
 
@@ -552,10 +612,12 @@ header p{
     width:18px;
     height:7px;
 
-    transform:translateX(-50%);
+    transform:
+        translateX(-50%);
 
     border-bottom:
-        2px solid #754537;
+        2px solid
+        #754537;
 
     border-radius:50%;
 }
@@ -565,26 +627,26 @@ header p{
     height:100px;
 
     margin:
-        -4px
-        auto
-        0;
+        -4px auto 0;
 
     border-radius:
-        25px
-        25px
-        14px
-        14px;
+        25px 25px
+        14px 14px;
 
     background:
         linear-gradient(
-        145deg,
-        #e1e5df,
-        #bbc9c1
+            145deg,
+            #e1e5df,
+            #bbc9c1
         );
 
     box-shadow:
-        inset -12px -10px 22px rgba(0,0,0,.08),
-        0 14px 20px rgba(0,0,0,.12);
+        inset
+        -12px -10px 22px
+        rgba(0,0,0,.08),
+
+        0 14px 20px
+        rgba(0,0,0,.12);
 }
 
 .teacherName{
@@ -593,11 +655,13 @@ header p{
     text-align:center;
 
     font-size:12px;
+
     color:#d9e3df;
+
     font-weight:800;
 }
 
-/* konuşma balonu */
+/* HOCA KONUŞMA BALONU */
 
 .speech{
     position:absolute;
@@ -607,23 +671,27 @@ header p{
 
     width:260px;
 
-    padding:14px 17px;
+    padding:
+        14px
+        17px;
 
     border-radius:
-        18px
-        18px
-        18px
-        4px;
+        18px 18px
+        18px 4px;
 
-    background:#f4f0e6;
+    background:
+        #f4f0e6;
+
     color:#18342b;
 
     font-size:13px;
     font-weight:800;
+
     line-height:1.45;
 
     box-shadow:
-        0 20px 45px rgba(0,0,0,.25);
+        0 20px 45px
+        rgba(0,0,0,.25);
 
     opacity:0;
 
@@ -631,7 +699,8 @@ header p{
         translateY(10px)
         scale(.95);
 
-    transition:.35s ease;
+    transition:
+        .35s ease;
 
     pointer-events:none;
 }
@@ -644,14 +713,15 @@ header p{
         scale(1);
 }
 
-/* öğrenci sıraları */
+/* ==============================
+   ÖĞRENCİLER
+================================ */
 
 .studentArea{
     position:absolute;
 
     left:30%;
     right:5%;
-
     bottom:35px;
 
     display:grid;
@@ -659,12 +729,15 @@ header p{
     grid-template-columns:
         repeat(3,1fr);
 
-    gap:28px 20px;
+    gap:
+        28px
+        20px;
 
     transform:
         rotateX(4deg);
 
-    transform-style:preserve-3d;
+    transform-style:
+        preserve-3d;
 }
 
 .student{
@@ -672,11 +745,13 @@ header p{
 
     min-height:130px;
 
-    transform-style:preserve-3d;
+    transform-style:
+        preserve-3d;
 
     transition:
         transform .4s ease,
-        filter .4s ease;
+        filter .4s ease,
+        opacity .4s ease;
 }
 
 .student:nth-child(2){
@@ -715,20 +790,25 @@ header p{
     margin:auto;
 
     border-radius:
-        45% 45% 48% 48%;
+        45% 45%
+        48% 48%;
 
     background:
         linear-gradient(
-        145deg,
-        #d8a37c,
-        #bb795b
+            145deg,
+            #d8a37c,
+            #bb795b
         );
 
     position:relative;
 
     box-shadow:
-        inset -7px -7px 12px rgba(0,0,0,.08),
-        0 7px 12px rgba(0,0,0,.15);
+        inset
+        -7px -7px 12px
+        rgba(0,0,0,.08),
+
+        0 7px 12px
+        rgba(0,0,0,.15);
 }
 
 .studentHead:before{
@@ -745,10 +825,8 @@ header p{
     background:#302621;
 
     border-radius:
-        30px
-        30px
-        12px
-        12px;
+        30px 30px
+        12px 12px;
 }
 
 .studentEyes{
@@ -759,7 +837,9 @@ header p{
     right:14px;
 
     display:flex;
-    justify-content:space-between;
+
+    justify-content:
+        space-between;
 }
 
 .studentEye{
@@ -767,6 +847,7 @@ header p{
     height:5px;
 
     border-radius:50%;
+
     background:#28221f;
 }
 
@@ -775,25 +856,19 @@ header p{
     height:55px;
 
     margin:
-        -3px
-        auto
-        0;
+        -3px auto 0;
 
     border-radius:
-        17px
-        17px
-        8px
-        8px;
+        17px 17px
+        8px 8px;
 
     background:
         linear-gradient(
-        145deg,
-        #8ab2a2,
-        #507e6c
+            145deg,
+            #8ab2a2,
+            #507e6c
         );
 }
-
-/* sıra */
 
 .desk3d{
     position:absolute;
@@ -809,21 +884,23 @@ header p{
         perspective(300px)
         rotateX(55deg);
 
-    transform-origin:bottom;
+    transform-origin:
+        bottom;
 
     border-radius:7px;
 
     background:
         linear-gradient(
-        #b88456,
-        #8d603e
+            #b88456,
+            #8d603e
         );
 
     box-shadow:
-        0 18px 15px rgba(0,0,0,.24);
+        0 18px 15px
+        rgba(0,0,0,.24);
 }
 
-/* öğrenci cevap balonu */
+/* CEVAP BALONU */
 
 .answerBubble{
     position:absolute;
@@ -833,23 +910,26 @@ header p{
 
     width:195px;
 
-    padding:11px 13px;
+    padding:
+        11px
+        13px;
 
     border-radius:
-        16px
-        16px
-        4px
-        16px;
+        16px 16px
+        4px 16px;
 
-    background:#fff;
+    background:white;
+
     color:#19362c;
 
     font-size:12px;
     font-weight:800;
+
     line-height:1.4;
 
     box-shadow:
-        0 18px 35px rgba(0,0,0,.24);
+        0 18px 35px
+        rgba(0,0,0,.24);
 
     opacity:0;
 
@@ -858,14 +938,16 @@ header p{
         translateY(8px)
         scale(.93);
 
-    transition:.35s ease;
+    transition:
+        .35s ease;
 
     z-index:50;
 
     pointer-events:none;
 }
 
-.student.answering .answerBubble{
+.student.answering
+.answerBubble{
     opacity:1;
 
     transform:
@@ -874,9 +956,136 @@ header p{
         scale(1);
 }
 
-/* ==========================
-   KONUŞMA PANELİ
-========================== */
+/* ==============================
+   ÇOCUKLARIN KAÇIŞI
+================================ */
+
+.student.escaping{
+    animation:
+        escapeClassroom
+        1.25s
+        cubic-bezier(.35,.01,.18,1)
+        forwards !important;
+}
+
+.student:nth-child(1).escaping{
+    --runX:-620px;
+    --runY:160px;
+    --runR:-20deg;
+}
+
+.student:nth-child(2).escaping{
+    --runX:620px;
+    --runY:140px;
+    --runR:20deg;
+}
+
+.student:nth-child(3).escaping{
+    --runX:-680px;
+    --runY:210px;
+    --runR:-24deg;
+}
+
+.student:nth-child(4).escaping{
+    --runX:700px;
+    --runY:190px;
+    --runR:24deg;
+}
+
+.student:nth-child(5).escaping{
+    --runX:-650px;
+    --runY:240px;
+    --runR:-28deg;
+}
+
+.student:nth-child(6).escaping{
+    --runX:660px;
+    --runY:240px;
+    --runR:28deg;
+}
+
+@keyframes escapeClassroom{
+
+    0%{
+        transform:
+            translateX(0)
+            translateY(0)
+            rotate(0)
+            scale(1);
+
+        opacity:1;
+    }
+
+    20%{
+        transform:
+            translateX(
+                calc(var(--runX) * .08)
+            )
+            translateY(-18px)
+            rotate(
+                calc(var(--runR) * .2)
+            )
+            scale(1.04);
+    }
+
+    40%{
+        transform:
+            translateX(
+                calc(var(--runX) * .25)
+            )
+            translateY(5px)
+            rotate(
+                calc(var(--runR) * .4)
+            );
+    }
+
+    60%{
+        transform:
+            translateX(
+                calc(var(--runX) * .48)
+            )
+            translateY(-16px)
+            rotate(
+                calc(var(--runR) * .6)
+            )
+            scale(.9);
+    }
+
+    80%{
+        transform:
+            translateX(
+                calc(var(--runX) * .75)
+            )
+            translateY(
+                var(--runY)
+            )
+            rotate(
+                calc(var(--runR) * .8)
+            )
+            scale(.72);
+    }
+
+    100%{
+        transform:
+            translateX(
+                var(--runX)
+            )
+            translateY(
+                var(--runY)
+            )
+            rotate(
+                var(--runR)
+            )
+            scale(.45);
+
+        opacity:0;
+    }
+
+}
+
+/* ==============================
+   ALT DİYALOG
+================================ */
 
 .dialogPanel{
     margin:
@@ -897,7 +1106,9 @@ header p{
 
     border-radius:20px;
 
-    border:1px solid var(--line);
+    border:
+        1px solid
+        var(--line);
 
     background:
         rgba(255,255,255,.05);
@@ -922,7 +1133,7 @@ header p{
     font-size:15px;
     font-weight:700;
 
-    white-space:normal;
+    line-height:1.5;
 }
 
 .nextBtn{
@@ -930,9 +1141,13 @@ header p{
 
     border-radius:14px;
 
-    padding:13px 17px;
+    padding:
+        13px
+        17px;
 
-    background:var(--gold);
+    background:
+        var(--gold);
+
     color:#2c250f;
 
     font-weight:900;
@@ -940,15 +1155,15 @@ header p{
     cursor:pointer;
 }
 
-/* ==========================
-   ALT KONTROLLER
-========================== */
+/* ==============================
+   KONTROLLER
+================================ */
 
 .controls{
     display:grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(2,1fr);
 
     gap:12px;
 
@@ -963,7 +1178,9 @@ header p{
 
     border-radius:16px;
 
-    border:1px solid var(--line);
+    border:
+        1px solid
+        var(--line);
 
     background:
         rgba(255,255,255,.07);
@@ -978,14 +1195,16 @@ header p{
 }
 
 .controlBtn:hover{
-    transform:translateY(-2px);
+    transform:
+        translateY(-2px);
 
     background:
         rgba(255,255,255,.10);
 }
 
 .controlBtn.gold{
-    background:rgba(232,200,117,.12);
+    background:
+        rgba(232,200,117,.12);
 
     border-color:
         rgba(232,200,117,.2);
@@ -993,19 +1212,224 @@ header p{
     color:#ebd796;
 }
 
-.controlBtn.green{
+/* ==============================
+   SABIR SONUÇ EKRANI
+================================ */
+
+.resultOverlay{
+    position:fixed;
+
+    inset:0;
+
+    z-index:500;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:22px;
+
     background:
-        rgba(65,184,133,.12);
+        rgba(3,16,13,.87);
 
-    border-color:
-        rgba(65,184,133,.2);
+    backdrop-filter:
+        blur(20px);
 
-    color:#afe4cc;
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:
+        opacity .6s ease,
+        visibility .6s ease;
 }
 
-/* ==========================
+.resultOverlay.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.resultCard{
+    width:min(570px,100%);
+
+    padding:
+        40px
+        30px;
+
+    border-radius:32px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(232,200,117,.10),
+            transparent 40%
+        ),
+        linear-gradient(
+            145deg,
+            #123a30,
+            #081f1a
+        );
+
+    box-shadow:
+        0 40px 120px
+        rgba(0,0,0,.45);
+
+    transform:
+        translateY(25px)
+        scale(.95);
+
+    transition:
+        transform .6s ease;
+}
+
+.resultOverlay.show
+.resultCard{
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+.resultSmall{
+    color:#9eb7ac;
+
+    font-size:11px;
+    font-weight:900;
+
+    letter-spacing:.2em;
+}
+
+.resultTitle{
+    margin-top:12px;
+
+    font-size:
+        clamp(30px,7vw,46px);
+
+    font-weight:900;
+
+    letter-spacing:-.04em;
+}
+
+.resultCircle{
+    position:relative;
+
+    width:180px;
+    height:180px;
+
+    margin:
+        30px auto
+        25px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        conic-gradient(
+            var(--gold) 0deg,
+            var(--gold) 360deg,
+            rgba(255,255,255,.07) 360deg
+        );
+
+    box-shadow:
+        0 0 50px
+        rgba(232,200,117,.15);
+}
+
+.resultCircle::before{
+    content:"";
+
+    position:absolute;
+
+    inset:12px;
+
+    border-radius:50%;
+
+    background:#0c2b23;
+}
+
+.resultNumber{
+    position:relative;
+
+    z-index:2;
+
+    font-size:48px;
+
+    font-weight:900;
+
+    color:var(--gold);
+}
+
+.resultRank{
+    font-size:24px;
+    font-weight:900;
+}
+
+.resultDescription{
+    max-width:440px;
+
+    margin:
+        12px auto 0;
+
+    color:#aec1b9;
+
+    font-size:15px;
+
+    line-height:1.7;
+}
+
+.restartBtn{
+    margin-top:28px;
+
+    border:0;
+
+    padding:
+        14px
+        24px;
+
+    border-radius:15px;
+
+    background:
+        var(--gold);
+
+    color:#29220e;
+
+    font-size:14px;
+    font-weight:900;
+
+    cursor:pointer;
+}
+
+/* ==============================
+   ANİMASYON
+================================ */
+
+@keyframes teacherIdle{
+
+    0%,100%{
+        transform:
+            translateY(0);
+    }
+
+    50%{
+        transform:
+            translateY(-3px);
+    }
+
+}
+
+/* ==============================
    MOBİL
-========================== */
+================================ */
 
 @media(max-width:800px){
 
@@ -1028,6 +1452,7 @@ header p{
 
     .board{
         width:58%;
+
         min-height:145px;
 
         left:66%;
@@ -1077,7 +1502,9 @@ header p{
         grid-template-columns:
             repeat(3,1fr);
 
-        gap:35px 8px;
+        gap:
+            35px
+            8px;
     }
 
     .student{
@@ -1097,9 +1524,7 @@ header p{
 
     .answerBubble{
         width:155px;
-
         font-size:10px;
-
         top:-55px;
     }
 
@@ -1156,38 +1581,19 @@ header p{
 
 }
 
-/* hafif hareket */
-
-@keyframes teacherIdle{
-
-    0%,100%{
-        transform:
-            translateY(0);
-    }
-
-    50%{
-        transform:
-            translateY(-3px);
-    }
-
-}
-
-.person{
-    animation:
-        teacherIdle
-        3.5s
-        ease-in-out
-        infinite;
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- SİNEMATİK AÇILIŞ -->
+<!-- ==========================
+     AÇILIŞ
+=========================== -->
 
-<div class="intro" id="intro">
+<div
+    class="intro"
+    id="intro"
+>
 
     <div class="introContent">
 
@@ -1210,12 +1616,16 @@ header p{
 </div>
 
 
+<!-- ==========================
+     ANA SAYFA
+=========================== -->
+
 <main class="page">
 
 <header>
 
     <div class="badge">
-        YAZ KUR'AN KURSU • EĞLENCE SÜRÜMÜ
+        YAZ KUR'AN KURSU • SABIR TESTİ
     </div>
 
     <h1>
@@ -1223,13 +1633,16 @@ header p{
     </h1>
 
     <p>
-        Sınıfta bugün neler yaşanacağı henüz bilinmiyor.
+        Altı soru. Altı öğrenci cevabı. Tek bir sabır göstergesi.
     </p>
 
 </header>
 
 
 <section class="panel">
+
+
+<!-- SABIR BAR -->
 
 <div class="topbar">
 
@@ -1261,6 +1674,7 @@ header p{
 
     </div>
 
+
     <button
         class="soundBtn"
         id="soundBtn"
@@ -1270,6 +1684,8 @@ header p{
 
 </div>
 
+
+<!-- SINIF -->
 
 <div class="classroomWrap">
 
@@ -1310,6 +1726,7 @@ header p{
             Çocuklar, hazır mıyız?
         </div>
 
+
         <div class="person">
 
             <div class="head">
@@ -1330,6 +1747,7 @@ header p{
 
         </div>
 
+
         <div class="teacherName">
             Enes Hoca
         </div>
@@ -1344,6 +1762,7 @@ header p{
         id="studentArea"
     >
 
+
         <div class="student">
 
             <div class="answerBubble"></div>
@@ -1487,6 +1906,8 @@ header p{
 
 </div>
 
+
+<!-- DİYALOG -->
 
 <div class="dialogPanel">
 
@@ -1508,15 +1929,18 @@ header p{
 
     </div>
 
+
     <button
         class="nextBtn"
         id="nextBtn"
     >
-        Yeni Soru
+        Derse Başla
     </button>
 
 </div>
 
+
+<!-- KONTROLLER -->
 
 <div class="controls">
 
@@ -1529,16 +1953,9 @@ header p{
 
     <button
         class="controlBtn"
-        id="rollBtn"
+        id="soundControlBtn"
     >
-        Yoklama Al
-    </button>
-
-    <button
-        class="controlBtn green"
-        id="breakBtn"
-    >
-        Teneffüs Ver
+        🔊 Ses Açık
     </button>
 
 </div>
@@ -1548,54 +1965,119 @@ header p{
 </main>
 
 
+<!-- ==========================
+     SABIR SONUÇ EKRANI
+=========================== -->
+
+<div
+    class="resultOverlay"
+    id="resultOverlay"
+>
+
+    <div class="resultCard">
+
+        <div class="resultSmall">
+            GÜN SONU RAPORU
+        </div>
+
+        <div class="resultTitle">
+            Enes Hoca Sabır Testi
+        </div>
+
+
+        <div
+            class="resultCircle"
+            id="resultCircle"
+        >
+
+            <div
+                class="resultNumber"
+                id="resultNumber"
+            >
+                %100
+            </div>
+
+        </div>
+
+
+        <div
+            class="resultRank"
+            id="resultRank"
+        >
+            Efsanevi Sabır
+        </div>
+
+
+        <div
+            class="resultDescription"
+            id="resultDescription"
+        >
+            Sonuç hazırlanıyor…
+        </div>
+
+
+        <button
+            class="restartBtn"
+            id="restartBtn"
+        >
+            Tekrar Başlat
+        </button>
+
+    </div>
+
+</div>
+
+
 <script>
 
-/* ==========================
-   VERİLER
-========================== */
+/* =============================
+   SORULAR
+============================= */
 
 const lessons = [
 
     {
         q:
-        "Çocuklar, bugün derse başlamadan önce söyleyin bakalım: Hazır mıyız?",
+        "Çocuklar, hazır mıyız? Derse başlayabilir miyiz?",
 
         answers:[
-            "Hazırız hocam!",
-            "Hocam ben hazırım ama kalemim hazır değil.",
-            "Hazırız hocam… teneffüs de hazır mı?"
+            "Hazırız hocam! Ama teneffüs saatini de söyler misiniz?",
+            "Ben hazırım hocam ama kalemim evde kaldı.",
+            "Hocam hazırız… sayılır."
         ],
 
         board:
         "Ders Başlıyor",
 
-        loss:4
+        loss:5
     },
+
 
     {
         q:
-        "Peki çocuklar, dün verdiğim ödevi kim yaptı?",
+        "Dün verdiğim ödevi kim yaptı bakalım?",
 
         answers:[
-            "Hocam yaptım ama defteri evde kaldı.",
-            "Ben yapacaktım hocam… sonra uyumuşum.",
-            "Hocam arkadaşım yaptı, beraber sayılır mı?"
+            "Hocam yaptım ama defteri evde unuttum.",
+            "Ben yapacaktım hocam, sonra bir anda sabah oldu.",
+            "Arkadaşım yaptı hocam. Beraber saysak olur mu?"
         ],
 
         board:
         "Ödev Kontrolü",
 
-        loss:8
+        loss:9
     },
+
 
     {
         q:
-        "Söyleyin bakalım, derste konuşmamamız gerektiğini neden söylüyoruz?",
+        "Çocuklar, derste neden sessiz olmamız gerekiyor?",
 
         answers:[
             "Dersi daha iyi dinlemek için hocam.",
             "Arkadaşlarımızı rahatsız etmemek için.",
-            "Hocam ama ben sadece çok önemli bir şey söyleyecektim."
+            "Hocam ben zaten sessiz konuşuyordum."
         ],
 
         board:
@@ -1604,13 +2086,14 @@ const lessons = [
         loss:6
     },
 
+
     {
         q:
-        "Çocuklar, daha dersin başındayız. Neden herkes saate bakıyor?",
+        "Daha dersin başındayız. Neden herkes saate bakıyor?",
 
         answers:[
-            "Hocam saati öğrenmek için.",
-            "Ben bakmıyordum hocam, saat bana baktı.",
+            "Hocam sadece saatin çalışıp çalışmadığını kontrol ediyoruz.",
+            "Ben saate bakmadım hocam. Saat bana baktı.",
             "Teneffüse kaç dakika kaldığını hesaplıyoruz."
         ],
 
@@ -1620,66 +2103,36 @@ const lessons = [
         loss:10
     },
 
+
     {
         q:
         "Kim gönüllü olarak tahtaya gelmek ister?",
 
         answers:[
-            "Hocam arkadaşım çok istiyor.",
-            "Ben gelirdim ama biraz uzaktayım.",
+            "Hocam arkadaşım çok istiyor!",
+            "Ben gelirdim hocam ama burası çok rahat.",
             "Hocam beni görmediniz değil mi?"
         ],
 
         board:
         "Gönüllü Aranıyor",
 
-        loss:9
+        loss:11
     },
+
 
     {
         q:
-        "Çocuklar, neden bu kadar sessizsiniz?",
+        "Son soru. Bugünkü dersten öğrendiğiniz en önemli şey neydi?",
 
         answers:[
-            "Hocam siz sessiz olun dediniz.",
-            "Hocam çok sessiz olunca da mı sıkıntı?",
-            "Teneffüsü bekliyoruz hocam."
+            "Dersi dikkatli dinlemeyi hocam.",
+            "Sabırlı olmayı öğrendik hocam.",
+            "Teneffüsün ne kadar kıymetli olduğunu hocam."
         ],
 
         board:
-        "Şüpheli Sessizlik",
-
-        loss:7
-    },
-
-    {
-        q:
-        "Bugünkü dersi kim anlatmak ister?",
-
-        answers:[
-            "Hocam siz çok güzel anlatıyorsunuz.",
-            "Sizi dinlemek bizim için daha iyi hocam.",
-            "Hocam bence düzeni bozmayalım."
-        ],
-
-        board:
-        "Sorumluluktan Kaçış",
-
-        loss:9
-    },
-
-    {
-        q:
-        "Son soru: Bugün öğrendiğiniz en önemli şey neydi?",
-
-        answers:[
-            "Dersi dinlemeyi hocam.",
-            "Sabırlı olmayı hocam.",
-            "Teneffüsün kıymetini hocam."
-        ],
-
-        board:
-        "Günün Özeti",
+        "Günün Son Sorusu",
 
         loss:8
     }
@@ -1687,58 +2140,111 @@ const lessons = [
 ];
 
 
-/* ==========================
+/* =============================
    ELEMANLAR
-========================== */
+============================= */
 
 const intro =
-    document.getElementById("intro");
+    document.getElementById(
+        "intro"
+    );
 
 const teacher =
-    document.getElementById("teacher");
+    document.getElementById(
+        "teacher"
+    );
 
 const teacherSpeech =
-    document.getElementById("teacherSpeech");
+    document.getElementById(
+        "teacherSpeech"
+    );
 
 const boardTitle =
-    document.getElementById("boardTitle");
+    document.getElementById(
+        "boardTitle"
+    );
 
 const dialogLabel =
-    document.getElementById("dialogLabel");
+    document.getElementById(
+        "dialogLabel"
+    );
 
 const dialogText =
-    document.getElementById("dialogText");
+    document.getElementById(
+        "dialogText"
+    );
 
 const percent =
-    document.getElementById("percent");
+    document.getElementById(
+        "percent"
+    );
 
 const meterFill =
-    document.getElementById("meterFill");
+    document.getElementById(
+        "meterFill"
+    );
 
 const students =
     [
-        ...document.querySelectorAll(".student")
+        ...document.querySelectorAll(
+            ".student"
+        )
     ];
 
 const nextBtn =
-    document.getElementById("nextBtn");
+    document.getElementById(
+        "nextBtn"
+    );
 
 const autoBtn =
-    document.getElementById("autoBtn");
-
-const rollBtn =
-    document.getElementById("rollBtn");
-
-const breakBtn =
-    document.getElementById("breakBtn");
+    document.getElementById(
+        "autoBtn"
+    );
 
 const soundBtn =
-    document.getElementById("soundBtn");
+    document.getElementById(
+        "soundBtn"
+    );
+
+const soundControlBtn =
+    document.getElementById(
+        "soundControlBtn"
+    );
+
+const resultOverlay =
+    document.getElementById(
+        "resultOverlay"
+    );
+
+const resultNumber =
+    document.getElementById(
+        "resultNumber"
+    );
+
+const resultCircle =
+    document.getElementById(
+        "resultCircle"
+    );
+
+const resultRank =
+    document.getElementById(
+        "resultRank"
+    );
+
+const resultDescription =
+    document.getElementById(
+        "resultDescription"
+    );
+
+const restartBtn =
+    document.getElementById(
+        "restartBtn"
+    );
 
 
-/* ==========================
+/* =============================
    DURUMLAR
-========================== */
+============================= */
 
 let currentLesson = 0;
 
@@ -1752,24 +2258,28 @@ let autoTimer = null;
 
 let busy = false;
 
+let lessonFinished = false;
 
-/* ==========================
-   AÇILIŞ
-========================== */
+
+/* =============================
+   INTRO
+============================= */
 
 setTimeout(
     () => {
 
-        intro.classList.add("hide");
+        intro.classList.add(
+            "hide"
+        );
 
     },
     2600
 );
 
 
-/* ==========================
+/* =============================
    SES
-========================== */
+============================= */
 
 function beep(
     frequency = 500,
@@ -1780,48 +2290,63 @@ function beep(
     if(!soundEnabled)
         return;
 
+
     try{
 
         const AudioContext =
             window.AudioContext ||
             window.webkitAudioContext;
 
+
         const ctx =
             new AudioContext();
+
 
         const osc =
             ctx.createOscillator();
 
+
         const gain =
             ctx.createGain();
+
 
         osc.type =
             "sine";
 
+
         osc.frequency.value =
             frequency;
+
 
         gain.gain.setValueAtTime(
             volume,
             ctx.currentTime
         );
 
+
         gain.gain.exponentialRampToValueAtTime(
             .0001,
             ctx.currentTime + duration
         );
 
-        osc.connect(gain);
+
+        osc.connect(
+            gain
+        );
+
 
         gain.connect(
             ctx.destination
         );
 
+
         osc.start();
+
 
         osc.stop(
             ctx.currentTime + duration
         );
+
 
         setTimeout(
             () => ctx.close(),
@@ -1829,40 +2354,45 @@ function beep(
         );
 
     }
-
     catch(e){
 
     }
 
 }
 
+
 function bell(){
 
     [
-        750,
-        930,
-        1120
+        760,
+        940,
+        1140
     ].forEach(
-        (f,i) => {
+
+        (frequency,index) => {
 
             setTimeout(
+
                 () => beep(
-                    f,
-                    .16,
-                    .04
+                    frequency,
+                    .17,
+                    .045
                 ),
-                i * 120
+
+                index * 120
+
             );
 
         }
+
     );
 
 }
 
 
-/* ==========================
+/* =============================
    SABIR
-========================== */
+============================= */
 
 function updatePatience(){
 
@@ -1875,20 +2405,27 @@ function updatePatience(){
             )
         );
 
+
     percent.textContent =
         "%" + patience;
+
 
     meterFill.style.width =
         patience + "%";
 
-    if(patience > 60){
+
+    if(
+        patience > 65
+    ){
 
         meterFill.style.background =
             "linear-gradient(90deg,#3ab885,#78d6ae)";
 
     }
 
-    else if(patience > 30){
+    else if(
+        patience > 35
+    ){
 
         meterFill.style.background =
             "linear-gradient(90deg,#e8c875,#e9a85c)";
@@ -1905,9 +2442,9 @@ function updatePatience(){
 }
 
 
-/* ==========================
-   ÖĞRENCİLERİ TEMİZLE
-========================== */
+/* =============================
+   ÖĞRENCİLER
+============================= */
 
 function clearStudents(){
 
@@ -1915,8 +2452,12 @@ function clearStudents(){
         student => {
 
             student.classList.remove(
-                "answering"
+                "answering",
+                "escaping"
             );
+
+            student.style.opacity =
+                "1";
 
         }
     );
@@ -1924,51 +2465,76 @@ function clearStudents(){
 }
 
 
-/* ==========================
-   HOCA SORU SORAR
-========================== */
+/* =============================
+   SORU SOR
+============================= */
 
 function askQuestion(){
 
-    if(busy)
+    if(
+        busy ||
+        lessonFinished
+    )
         return;
+
+
+    if(
+        currentLesson >=
+        lessons.length
+    ){
+
+        finishLesson();
+
+        return;
+
+    }
+
 
     busy = true;
 
+
     clearStudents();
 
+
     const lesson =
-        lessons[
-            currentLesson %
-            lessons.length
-        ];
+        lessons[currentLesson];
+
 
     boardTitle.textContent =
-        lesson.board;
+        `${currentLesson + 1}. Soru • ${lesson.board}`;
+
 
     teacher.classList.add(
         "asking"
     );
 
+
     teacherSpeech.textContent =
         lesson.q;
+
 
     teacherSpeech.classList.add(
         "show"
     );
 
+
     dialogLabel.textContent =
         "ENES HOCA";
 
+
     dialogText.textContent =
         lesson.q;
+
+
+    nextBtn.textContent =
+        `${currentLesson + 1} / 6`;
+
 
     beep(
         430,
         .1
     );
 
-    /* 2.2 saniye sonra öğrenci cevap verir */
 
     setTimeout(
         () => {
@@ -1977,11 +2543,13 @@ function askQuestion(){
                 "show"
             );
 
+
             teacher.classList.remove(
                 "asking"
             );
 
-            answerQuestion(
+
+            studentAnswer(
                 lesson
             );
 
@@ -1992,11 +2560,11 @@ function askQuestion(){
 }
 
 
-/* ==========================
-   ÖĞRENCİ CEVAP VERİR
-========================== */
+/* =============================
+   ÖĞRENCİ CEVABI
+============================= */
 
-function answerQuestion(
+function studentAnswer(
     lesson
 ){
 
@@ -2006,51 +2574,64 @@ function answerQuestion(
             students.length
         );
 
+
     const answerIndex =
         Math.floor(
             Math.random() *
             lesson.answers.length
         );
 
+
     const student =
         students[
             studentIndex
         ];
+
 
     const answer =
         lesson.answers[
             answerIndex
         ];
 
+
     const bubble =
         student.querySelector(
             ".answerBubble"
         );
 
+
     bubble.textContent =
         answer;
+
 
     student.classList.add(
         "answering"
     );
 
+
     dialogLabel.textContent =
         "ÖĞRENCİ";
+
 
     dialogText.textContent =
         answer;
 
+
     beep(
-        620,
+        610,
         .09
     );
+
 
     patience -=
         lesson.loss;
 
+
     updatePatience();
 
+
     currentLesson++;
+
 
     setTimeout(
         () => {
@@ -2059,7 +2640,28 @@ function answerQuestion(
                 "answering"
             );
 
+
             busy = false;
+
+
+            if(
+                currentLesson >=
+                lessons.length
+            ){
+
+                setTimeout(
+                    finishLesson,
+                    1000
+                );
+
+                return;
+
+            }
+
+
+            nextBtn.textContent =
+                "Sonraki Soru";
+
 
             if(
                 autoMode
@@ -2068,33 +2670,379 @@ function answerQuestion(
                 autoTimer =
                     setTimeout(
                         askQuestion,
-                        1500
+                        1400
                     );
 
             }
 
         },
-        2800
+        2700
     );
 
 }
 
 
-/* ==========================
+/* =============================
+   DERS BİTİYOR
+============================= */
+
+function finishLesson(){
+
+    if(
+        lessonFinished
+    )
+        return;
+
+
+    lessonFinished =
+        true;
+
+
+    busy =
+        true;
+
+
+    autoMode =
+        false;
+
+
+    clearTimeout(
+        autoTimer
+    );
+
+
+    autoBtn.textContent =
+        "▶ Otomatik Ders";
+
+
+    nextBtn.textContent =
+        "Ders Tamamlandı";
+
+
+    boardTitle.textContent =
+        "DERS BİTTİ!";
+
+
+    teacherSpeech.textContent =
+        "Tamam çocuklar, bugünlük dersimiz bitti!";
+
+
+    teacherSpeech.classList.add(
+        "show"
+    );
+
+
+    teacher.classList.add(
+        "asking"
+    );
+
+
+    dialogLabel.textContent =
+        "ENES HOCA";
+
+
+    dialogText.textContent =
+        "Tamam çocuklar, bugünlük dersimiz bitti!";
+
+
+    bell();
+
+
+    setTimeout(
+        () => {
+
+            teacherSpeech.classList.remove(
+                "show"
+            );
+
+
+            teacher.classList.remove(
+                "asking"
+            );
+
+
+            dialogLabel.textContent =
+                "SINIF";
+
+
+            dialogText.textContent =
+                "“Ders bitti” cümlesi duyuldu. Sınıfta ani hareketlilik başladı…";
+
+
+            childrenEscape();
+
+        },
+        1800
+    );
+
+}
+
+
+/* =============================
+   KAÇIŞ
+============================= */
+
+function childrenEscape(){
+
+    students.forEach(
+
+        (student,index) => {
+
+            setTimeout(
+                () => {
+
+                    student.classList.add(
+                        "escaping"
+                    );
+
+                    beep(
+                        700 +
+                        index * 40,
+                        .04,
+                        .015
+                    );
+
+                },
+                index * 160
+            );
+
+        }
+
+    );
+
+
+    setTimeout(
+        () => {
+
+            boardTitle.textContent =
+                "Sınıf boşaldı.";
+
+            dialogLabel.textContent =
+                "SİSTEM";
+
+            dialogText.textContent =
+                "Kaçış süresi: yeni dünya rekoruna oldukça yakın.";
+
+
+            setTimeout(
+                showResult,
+                1200
+            );
+
+        },
+        2400
+    );
+
+}
+
+
+/* =============================
+   SABIR MESAJI
+============================= */
+
+function getResult(){
+
+    if(
+        patience >= 85
+    ){
+
+        return {
+
+            rank:
+                "Efsanevi Sabır",
+
+            description:
+                "Enes Hoca bugün neredeyse hiç etkilenmedi. Öğrenciler bütün taktikleri denedi ama sabır kalesini geçemediler."
+
+        };
+
+    }
+
+
+    if(
+        patience >= 70
+    ){
+
+        return {
+
+            rank:
+                "Çelik Gibi Sinirler",
+
+            description:
+                "Gayet başarılı. Arada birkaç kez saate bakılmış olabilir ama Enes Hoca günü oldukça sakin kapattı."
+
+        };
+
+    }
+
+
+    if(
+        patience >= 55
+    ){
+
+        return {
+
+            rank:
+                "Gayet İyi Dayandın",
+
+            description:
+                "Sabır hâlâ yerinde. Fakat altıncı soruda teneffüs zilini Enes Hoca'nın da beklediğine dair güçlü şüpheler var."
+
+        };
+
+    }
+
+
+    if(
+        patience >= 40
+    ){
+
+        return {
+
+            rank:
+                "Sabır Test Edildi",
+
+            description:
+                "Ders başarıyla tamamlandı. Yalnız yarın dersten önce bir bardak çay ve birkaç dakikalık sessizlik tavsiye edilir."
+
+        };
+
+    }
+
+
+    if(
+        patience >= 20
+    ){
+
+        return {
+
+            rank:
+                "Kritik Sabır Seviyesi",
+
+            description:
+                "Enes Hoca büyük mücadele verdi. Öğrenciler sınıftan koşarak çıktı; sabır da arkalarından gitmeye hazırlanıyordu."
+
+        };
+
+    }
+
+
+    return {
+
+        rank:
+            "Allah Sabır Versin Hocam",
+
+        description:
+            "Bugünkü sınıf zorlu moddaydı. Ders bitti, öğrenciler kaçtı ve Enes Hoca'nın sabrı olay yerinde son anda kurtarıldı."
+
+    };
+
+}
+
+
+/* =============================
+   SONUÇ EKRANI
+============================= */
+
+function showResult(){
+
+    const result =
+        getResult();
+
+
+    resultNumber.textContent =
+        "%" + patience;
+
+
+    resultRank.textContent =
+        result.rank;
+
+
+    resultDescription.textContent =
+        result.description;
+
+
+    const angle =
+        patience * 3.6;
+
+
+    let ringColor =
+        "#e8c875";
+
+
+    if(
+        patience >= 65
+    ){
+
+        ringColor =
+            "#54c997";
+
+    }
+
+    else if(
+        patience < 35
+    ){
+
+        ringColor =
+            "#e56b6b";
+
+    }
+
+
+    resultCircle.style.background =
+        `conic-gradient(
+            ${ringColor} 0deg,
+            ${ringColor} ${angle}deg,
+            rgba(255,255,255,.07) ${angle}deg,
+            rgba(255,255,255,.07) 360deg
+        )`;
+
+
+    resultNumber.style.color =
+        ringColor;
+
+
+    resultOverlay.classList.add(
+        "show"
+    );
+
+
+    bell();
+
+
+    busy =
+        false;
+
+}
+
+
+/* =============================
    OTOMATİK DERS
-========================== */
+============================= */
 
 function toggleAuto(){
+
+    if(
+        lessonFinished
+    )
+        return;
+
 
     autoMode =
         !autoMode;
 
-    if(autoMode){
+
+    if(
+        autoMode
+    ){
 
         autoBtn.textContent =
             "⏸ Otomatik Dersi Durdur";
 
-        if(!busy){
+
+        if(
+            !busy
+        ){
 
             askQuestion();
 
@@ -2108,6 +3056,7 @@ function toggleAuto(){
             autoTimer
         );
 
+
         autoBtn.textContent =
             "▶ Otomatik Ders";
 
@@ -2116,303 +3065,193 @@ function toggleAuto(){
 }
 
 
-/* ==========================
-   YOKLAMA
-========================== */
+/* =============================
+   SES
+============================= */
 
-function takeRoll(){
+function toggleSound(){
 
-    if(busy)
-        return;
+    soundEnabled =
+        !soundEnabled;
 
-    busy = true;
 
-    autoMode = false;
+    soundBtn.textContent =
+        soundEnabled
+        ? "🔊"
+        : "🔇";
 
-    autoBtn.textContent =
-        "▶ Otomatik Ders";
 
-    clearTimeout(
-        autoTimer
-    );
+    soundControlBtn.textContent =
+        soundEnabled
+        ? "🔊 Ses Açık"
+        : "🔇 Ses Kapalı";
 
-    clearStudents();
 
-    const names = [
+    if(
+        soundEnabled
+    ){
 
-        "Ahmet — Burada.",
-
-        "Mehmet — Burada.",
-
-        "Yusuf — Burada.",
-
-        "Ömer — Burada.",
-
-        "Mustafa — ...",
-
-        "Mustafa?",
-
-        "Mustafa nerede?"
-
-    ];
-
-    boardTitle.textContent =
-        "Yoklama";
-
-    let index = 0;
-
-    teacherSpeech.textContent =
-        names[0];
-
-    teacherSpeech.classList.add(
-        "show"
-    );
-
-    teacher.classList.add(
-        "asking"
-    );
-
-    dialogLabel.textContent =
-        "ENES HOCA";
-
-    dialogText.textContent =
-        names[0];
-
-    const timer =
-        setInterval(
-            () => {
-
-                index++;
-
-                if(
-                    index >=
-                    names.length
-                ){
-
-                    clearInterval(
-                        timer
-                    );
-
-                    teacherSpeech.textContent =
-                        "Yine bir kişi kayıp…";
-
-                    dialogText.textContent =
-                        "Yine bir kişi kayıp…";
-
-                    patience -= 7;
-
-                    updatePatience();
-
-                    setTimeout(
-                        () => {
-
-                            teacherSpeech.classList.remove(
-                                "show"
-                            );
-
-                            teacher.classList.remove(
-                                "asking"
-                            );
-
-                            busy = false;
-
-                        },
-                        1700
-                    );
-
-                    return;
-
-                }
-
-                teacherSpeech.textContent =
-                    names[index];
-
-                dialogText.textContent =
-                    names[index];
-
-                beep(
-                    470 +
-                    index * 20,
-                    .05
-                );
-
-            },
+        beep(
             650
         );
+
+    }
 
 }
 
 
-/* ==========================
-   TENEFFÜS
-========================== */
+/* =============================
+   YENİDEN BAŞLAT
+============================= */
 
-function breakTime(){
+function restart(){
 
-    if(busy)
-        return;
+    resultOverlay.classList.remove(
+        "show"
+    );
 
-    autoMode = false;
 
-    autoBtn.textContent =
-        "▶ Otomatik Ders";
+    currentLesson =
+        0;
+
+
+    patience =
+        100;
+
+
+    autoMode =
+        false;
+
+
+    busy =
+        false;
+
+
+    lessonFinished =
+        false;
+
 
     clearTimeout(
         autoTimer
     );
 
+
     clearStudents();
 
-    boardTitle.textContent =
-        "TENEFFÜS";
-
-    teacherSpeech.textContent =
-        "Tamam çocuklar, teneffüs!";
-
-    teacherSpeech.classList.add(
-        "show"
-    );
-
-    teacher.classList.add(
-        "asking"
-    );
-
-    dialogLabel.textContent =
-        "ENES HOCA";
-
-    dialogText.textContent =
-        "Tamam çocuklar, teneffüs!";
-
-    bell();
-
-    patience += 20;
-
-    updatePatience();
 
     students.forEach(
-        (student,index) => {
+        student => {
 
-            setTimeout(
-                () => {
+            student.style.opacity =
+                "1";
 
-                    student.style.transform =
-                        `translateX(${index % 2 ? 35 : -35}px)
-                        translateY(-10px)
-                        rotate(${index % 2 ? 6 : -6}deg)`;
-
-                },
-                index * 90
-            );
+            student.style.transform =
+                "";
 
         }
     );
 
-    setTimeout(
-        () => {
 
-            students.forEach(
-                student => {
+    updatePatience();
 
-                    student.style.transform =
-                        "";
 
-                }
-            );
+    boardTitle.textContent =
+        "Enes Hoca sınıfa bakıyor…";
 
-            teacherSpeech.classList.remove(
-                "show"
-            );
 
-            teacher.classList.remove(
-                "asking"
-            );
+    dialogLabel.textContent =
+        "SİSTEM";
 
-            dialogLabel.textContent =
-                "SİSTEM";
 
-            dialogText.textContent =
-                "Sınıf 0.3 saniyede boşaldı.";
+    dialogText.textContent =
+        "Yeni ders için her şey hazır.";
 
-        },
-        1900
+
+    nextBtn.textContent =
+        "Derse Başla";
+
+
+    autoBtn.textContent =
+        "▶ Otomatik Ders";
+
+
+    teacherSpeech.classList.remove(
+        "show"
+    );
+
+
+    teacher.classList.remove(
+        "asking"
     );
 
 }
 
 
-/* ==========================
+/* =============================
    BUTONLAR
-========================== */
+============================= */
 
 nextBtn.addEventListener(
     "click",
     askQuestion
 );
 
+
 autoBtn.addEventListener(
     "click",
     toggleAuto
 );
 
-rollBtn.addEventListener(
-    "click",
-    takeRoll
-);
-
-breakBtn.addEventListener(
-    "click",
-    breakTime
-);
 
 soundBtn.addEventListener(
     "click",
-    function(){
-
-        soundEnabled =
-            !soundEnabled;
-
-        this.textContent =
-            soundEnabled
-            ? "🔊"
-            : "🔇";
-
-        if(soundEnabled){
-
-            beep(
-                650
-            );
-
-        }
-
-    }
+    toggleSound
 );
 
 
-/* ==========================
-   BAŞLANGIÇ
-========================== */
+soundControlBtn.addEventListener(
+    "click",
+    toggleSound
+);
+
+
+restartBtn.addEventListener(
+    "click",
+    restart
+);
+
+
+/* =============================
+   İLK AÇILIŞ
+============================= */
 
 updatePatience();
+
 
 setTimeout(
     () => {
 
-        dialogLabel.textContent =
-            "ENES HOCA";
-
-        dialogText.textContent =
-            "Çocuklar, derse başlayalım mı?";
-
         teacherSpeech.textContent =
             "Çocuklar, derse başlayalım mı?";
+
 
         teacherSpeech.classList.add(
             "show"
         );
 
+
         teacher.classList.add(
             "asking"
         );
+
+
+        dialogLabel.textContent =
+            "ENES HOCA";
+
+
+        dialogText.textContent =
+            "Çocuklar, derse başlayalım mı?";
+
 
         setTimeout(
             () => {
@@ -2421,12 +3260,13 @@ setTimeout(
                     "show"
                 );
 
+
                 teacher.classList.remove(
                     "asking"
                 );
 
             },
-            2100
+            2200
         );
 
     },
